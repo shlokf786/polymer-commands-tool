@@ -1,0 +1,3 @@
+# Ignore all yml files
+*.yml
+node_modules
