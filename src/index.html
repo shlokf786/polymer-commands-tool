@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+	<title>Electron Auto Update Example</title>
+	<script src="../node_modules/bootstrap/dist/css/bootstrap.min.css"></script>
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../src/index.css">
+</head>
+<body>
+	<h1>Electron Auto Update Example</h1>
+	<p id="version"></p>
+	<div>
+		<div class="row">
+			<button type="button" id="pullBtn"class="col btn btn-primary">Pull</button>
+			<button type="button" id="pushBtn" class="col btn btn-primary">Push</button>
+			<button type="button" id="bundleBtn" class="col btn btn-primary">Bundle</button>
+			<button type="button" id="settingBtn" class="col btn btn-primary">Setting</button>
+			<button type="button" id="historyBtn"class="col btn btn-primary">History</button>
+		</div>
+		<div class="row overflow-only-y listBoxDiv">
+				<ul id="fileListBox" class="list-group"></ul>
+		</div>
+	</div>
+	
+	<div id="notification" class="hidden">
+		<p id="message"></p>
+		<button id="close-button" onClick="closeNotification()">
+			Close
+		</button>
+		<button id="restart-button" onClick="restartApp()" class="hidden">
+			Restart
+		</button>
+	</div>
+	<script src="../src/render.js"></script>
+</body>
